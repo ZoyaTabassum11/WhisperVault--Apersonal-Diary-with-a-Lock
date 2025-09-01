@@ -1,0 +1,60 @@
+<!-- activity_main.xml -->
+<!-- This layout defines the user interface for the initial authentication screen. -->
+<!-- It allows the user to set a new PIN or enter an existing one. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="#F5F5DC"
+    tools:context=".MainActivity">
+
+    <!-- Title for the authentication section -->
+    <TextView
+        android:id="@+id/authTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set Your PIN"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#333333"
+        android:layout_marginBottom="32dp" />
+
+    <!-- Input field for the PIN -->
+    <EditText
+        android:id="@+id/pinInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberPassword"
+        android:hint="Enter 4-digit PIN"
+        android:maxLength="4"
+        android:padding="16dp"
+        android:background="@drawable/rounded_edittext"
+        android:layout_marginBottom="24dp"
+        android:gravity="center"
+        android:textSize="20sp" />
+
+    <!-- Button to confirm or set the PIN -->
+    <Button
+        android:id="@+id/confirmButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Set PIN"
+        android:background="@drawable/rounded_button"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:padding="16dp" />
+
+    <!-- Message for the user (e.g., "PIN set successfully", "Incorrect PIN") -->
+    <TextView
+        android:id="@+id/messageText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="#FF0000"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp" />
+
+</LinearLayout>

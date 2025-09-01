@@ -1,0 +1,99 @@
+<!-- activity_diary.xml -->
+<!-- This layout defines the user interface for the diary entry screen, now including image functionality. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="#F0F8FF"
+    tools:context=".DiaryActivity">
+
+    <!-- Title for the Diary section -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="My Personal Diary"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#333333"
+        android:layout_marginBottom="24dp"
+        android:layout_gravity="center_horizontal" />
+
+    <!-- Input field for new diary entries -->
+    <EditText
+        android:id="@+id/newEntryInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="120dp"
+        android:gravity="top|start"
+        android:hint="Write your thoughts here..."
+        android:padding="16dp"
+        android:background="@drawable/rounded_edittext"
+        android:layout_marginBottom="16dp"
+        android:textSize="18sp"
+        android:lines="5" />
+
+    <!-- Button to add an image -->
+    <Button
+        android:id="@+id/addImageButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Image"
+        android:background="@drawable/rounded_button_blue"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:padding="16dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- ImageView to display the selected image preview -->
+    <ImageView
+        android:id="@+id/selectedImageView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerInside"
+        android:layout_marginBottom="16dp"
+        android:visibility="gone"
+        android:background="@drawable/rounded_image_border"
+        android:contentDescription="Selected Image Preview" />
+
+    <!-- Button to save the new entry -->
+    <Button
+        android:id="@+id/saveEntryButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save Entry"
+        android:background="@drawable/rounded_button"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:padding="16dp"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Title for past entries section -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Past Entries"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#333333"
+        android:layout_marginBottom="16dp" />
+
+    <!-- ScrollView to display past entries -->
+    <!-- The actual past entries will be added dynamically as LinearLayouts -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/rounded_scrollview_background"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:id="@+id/pastEntriesContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+    </ScrollView>
+
+</LinearLayout>

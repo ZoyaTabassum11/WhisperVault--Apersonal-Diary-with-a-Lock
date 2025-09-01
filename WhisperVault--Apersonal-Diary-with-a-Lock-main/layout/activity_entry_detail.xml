@@ -1,0 +1,92 @@
+<!-- activity_entry_detail.xml -->
+<!-- This layout defines the UI for viewing and editing a single diary entry. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="#F0F8FF"
+    tools:context=".EntryDetailActivity">
+
+    <!-- Timestamp display -->
+    <TextView
+        android:id="@+id/detailTimestamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date: 2024-01-01 12:00"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#333333"
+        android:layout_marginBottom="16dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <!-- EditText for entry text -->
+    <EditText
+        android:id="@+id/detailEntryText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="150dp"
+        android:gravity="top|start"
+        android:hint="Edit your thoughts here..."
+        android:padding="16dp"
+        android:background="@drawable/rounded_edittext"
+        android:layout_marginBottom="16dp"
+        android:textSize="18sp" />
+
+    <!-- ImageView for displaying the full image -->
+    <ImageView
+        android:id="@+id/detailImageView"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:scaleType="centerInside"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/rounded_image_border"
+        android:contentDescription="Full Image View" />
+
+    <!-- Button to change the image -->
+    <Button
+        android:id="@+id/changeImageButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Change Image"
+        android:background="@drawable/rounded_button_blue"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:padding="16dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Buttons for actions (Update, Delete) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/updateEntryButton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Update Entry"
+            android:background="@drawable/rounded_button"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:padding="16dp"
+            android:layout_marginEnd="8dp" />
+
+        <Button
+            android:id="@+id/deleteEntryButton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Delete Entry"
+            android:background="@drawable/rounded_button_red"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:padding="16dp"
+            android:layout_marginStart="8dp" />
+
+    </LinearLayout>
+
+</LinearLayout>
